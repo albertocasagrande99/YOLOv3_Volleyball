@@ -17,7 +17,7 @@ python player_detection.py -l obj_person.names -cfg yolov3.cfg -w yolov3.weights
 ```
 python ball_detection.py -l obj_ball.names -cfg yolov3_custom.cfg -w yolov3_custom_last.weights -v video.mp4 -s -out_txt video.txt
 ```
-### Ball tracking
+### Ball tracking :volleyball:
 ```
 python ball_tracker.py --det video.txt --video video.mp4 --out_tracker tracker_output.txt
 ```
