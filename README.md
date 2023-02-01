@@ -1,5 +1,5 @@
-# Detection and tracking in volleyball match
-Our software detects players and the ball in volleyball games. Furthermore, it is possible to track the ball within a video of a match. The detector used is YOLOv3, while the tracker is CSRT, which is available in OpenCV. 
+# Detection and tracking in volleyball match :volleyball:
+Our software detects the players and the ball in volleyball games. Furthermore, it is possible to track the ball within a video of a match. The detector used is YOLOv3, while the tracker is CSRT, which is available in OpenCV. 
 
 ## Weights
 ### Player detection
@@ -9,11 +9,17 @@ Regarding ball detection, Yolov3 was trained specifically for volleyball using a
 
 ## How to run
 ### Player detection
-`python player_detection.py -l obj_person.names -cfg yolov3.cfg -w yolov3.weights -v video.mp4 -s -out_txt video.txt`
+```
+python player_detection.py -l obj_person.names -cfg yolov3.cfg -w yolov3.weights -v video.mp4 -s -out_txt video.txt
+```
 ### Ball detection
-`python ball_detection.py -l obj_ball.names -cfg yolov3_custom.cfg -w yolov3_custom_last.weights -v video.mp4 -s -out_txt video.txt`
+```
+python ball_detection.py -l obj_ball.names -cfg yolov3_custom.cfg -w yolov3_custom_last.weights -v video.mp4 -s -out_txt video.txt
+```
 ### Ball tracking
-`python ball_tracker.py --det video.txt --video video.mp4 --out_tracker tracker_output.txt`
+```
+python ball_tracker.py --det video.txt --video video.mp4 --out_tracker tracker_output.txt
+```
 
 
 Opencv-contrib-python version 4.4.0.46
